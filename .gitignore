@@ -1,0 +1,6 @@
+ESP8266/secrets.h
+PC_Local/config.json
+Servidor_PHP/config.php
+*.db
+__pycache__/
+*.pyc
