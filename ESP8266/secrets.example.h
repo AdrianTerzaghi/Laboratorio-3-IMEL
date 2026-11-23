@@ -1,0 +1,6 @@
+#pragma once
+
+#define WIFI_SSID "NOMBRE_DE_TU_RED_2_4GHZ"
+#define WIFI_PASS "CLAVE_DE_TU_RED"
+#define MQTT_HOST "IP_DE_LA_PC_CON_MOSQUITTO"
+#define MQTT_PORT 1883

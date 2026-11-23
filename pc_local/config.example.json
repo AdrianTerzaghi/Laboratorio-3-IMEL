@@ -1,0 +1,9 @@
+{
+  "mqtt_host": "localhost",
+  "mqtt_port": 1883,
+  "cloud_url": "https://DOMINIO/RUTA/nube.php",
+  "api_key": "la-misma-clave-que-api_key-de-config.php",
+  "upload_period_s": 600,
+  "poll_period_s": 5,
+  "db_path": "nivel2.db"
+}

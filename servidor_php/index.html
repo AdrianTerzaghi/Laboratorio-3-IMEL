@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Grupo 07 · Instrumentación y Medidas Eléctricas</title>
+<style>
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f3f6f8;color:#1d3445;line-height:1.55}
+header{background:#142f43;color:#fff;padding:28px 6%}header p{color:#a9c0d0;margin:6px 0 0}
+main{max-width:900px;margin:auto;padding:28px 6%}h1{margin:0;font-size:26px}h2{font-size:18px;margin:26px 0 8px}
+ul{padding-left:20px}a.boton{display:inline-block;background:#168772;color:#fff;padding:11px 18px;border-radius:6px;text-decoration:none;font-weight:bold}
+table{border-collapse:collapse;width:100%;background:#fff}td,th{border:1px solid #dde5eb;padding:8px;text-align:left}th{background:#e8eff4}
+</style>
+</head>
+<body>
+<header>
+  <h1>Sistema de instrumentación multivariable IoT/IIoT</h1>
+  <p>Laboratorio Final Integrador · Instrumentación y Medidas Eléctricas · Ingeniería en Mecatrónica · UTEC, ITR Suroeste</p>
+</header>
+<main>
+  <h2>Descripción del proyecto</h2>
+  <p>Instrumento de medición distribuido de tres niveles. Un Arduino Uno adquiere cinco variables con intervalos de muestreo
+  independientes; un ESP8266 enlaza el bus I²C con la red mediante MQTT; una PC local consolida los datos y los envía a este
+  servidor, que conserva el histórico, muestra las mediciones con su incertidumbre y permite cambiar el intervalo de
+  muestreo de cada canal a distancia.</p>
+
+  <table>
+    <tr><th>Variable</th><th>Sensor</th><th>Unidad</th></tr>
+    <tr><td>Temperatura de proceso</td><td>Termocupla tipo K y MAX6675</td><td>°C</td></tr>
+    <tr><td>Temperatura ambiente</td><td>DHT11</td><td>°C</td></tr>
+    <tr><td>Humedad relativa</td><td>DHT11</td><td>% HR</td></tr>
+    <tr><td>Iluminancia</td><td>LDR calibrada contra luxómetro</td><td>lx</td></tr>
+    <tr><td>Distancia</td><td>HC-SR04</td><td>cm</td></tr>
+  </table>
+
+  <h2>Integrantes · Grupo 07</h2>
+  <ul>
+    <li>Guido Andreoli</li>
+    <li>Lucas De León</li>
+    <li>Adrián Terzaghi</li>
+  </ul>
+
+  <h2>Docentes</h2>
+  <p>Daniel Fernández · Rodrigo Sosa · José S. Sasías</p>
+
+  <h2>Dashboard</h2>
+  <p>Acceso con usuario y contraseña del grupo.</p>
+  <a class="boton" href="panel.php">Abrir dashboard</a>
+</main>
+</body>
+</html>
