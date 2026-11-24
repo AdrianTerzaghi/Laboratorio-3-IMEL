@@ -1,0 +1,5 @@
+# Impide abrir desde el navegador los archivos con credenciales o funciones internas.
+<FilesMatch "^(config|lib)\.php$">
+    Require all denied
+</FilesMatch>
+Options -Indexes
