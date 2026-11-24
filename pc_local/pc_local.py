@@ -106,9 +106,12 @@ def crear_cliente():
 
 def subir_telemetria():
     con = db()
+    # Solo se suben las muestras que ya estaban guardadas al empezar el ciclo;
+    # las que llegan mientras se sube quedan para el ciclo siguiente.
+    tope = con.execute("SELECT COALESCE(MAX(id), 0) FROM samples").fetchone()[0]
     while True:
-        filas = con.execute("SELECT * FROM samples WHERE sent=0 ORDER BY id LIMIT ?",
-                            (LOTE_MAX,)).fetchall()
+        filas = con.execute("SELECT * FROM samples WHERE sent=0 AND id<=? ORDER BY id LIMIT ?",
+                            (tope, LOTE_MAX)).fetchall()
         if not filas:
             break
         cuerpo = {"rows": [
