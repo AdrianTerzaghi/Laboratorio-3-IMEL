@@ -236,7 +236,7 @@ API del servidor (la clave va en el encabezado `X-API-Key`): `POST /api/telemetr
 | `No such file or directory` al ejecutar el script | La consola no está dentro de `pc_local/`, o el nombre del script o de `config.json` no coincide. |
 | `Clave API inválida` (error 401) | `api_key` de `config.json` y de `config.php` deben ser idénticas. |
 | `Error del servidor` o 500 en `nube.php` | Datos de la base mal escritos en `config.php`, o tablas no creadas (paso 4, punto 1). |
-| No se suben datos | Con `upload_period_s = 600` la primera subida ocurre a los 10 minutos de iniciar el script. |
+| No se suben datos | Con upload_period_s = 600 el script sube los datos pendientes al arrancar y después cada 10 minutos. Si no hay muestras nuevas, no imprime nada. |
 | El Arduino no carga | Revisar la placa (Arduino Uno) y el puerto COM elegidos en *Herramientas*. |
 | El NodeMCU no se conecta | Revisar `WIFI_SSID` y `WIFI_PASS`, y que la red sea de 2,4 GHz. |
 | Lecturas con guion (`-`) | Todavía no hay muestra de ese canal, o el sensor no está conectado. |
